@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #968782;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.7;
+}
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, #aeb7c659, #7f6b62b0) ,url('../img/pexels-jimmy-teoh-951531.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 0%);
+    position: relative;
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(50%, -50%);
+    color: #d5cbca;
+}
+
+.text-box h1{
+    text-transform: uppercase;
+}
+.heading-main{
+    display:block;
+    font-size: 3rem;
+    left: 1.rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes moveInLeft {
+    0%{ 
+        transform: translateX(-1000px);
+        opacity: 0;
+
+    }
+    80%{
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.heading-sub{
+    display:block;
+    font-size: 3rem;
+    left: 1.rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes moveInRight {
+    0%{ 
+        transform: translateX(1000px);
+        opacity: 0;
+
+    }
+    80%{
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.btn-container{
+    font-size: 16px;
+
+}
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
